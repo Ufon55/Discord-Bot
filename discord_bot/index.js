@@ -45,10 +45,6 @@ client.on('messageCreate', (message) => {
     return message.reply('zdar pizdo');
   }
 
-  if (command === '!kde si byl') {
-    return message.reply('na baráku');
-  }
-
   if (command === '!ptacek') {
     const ptacek_quotes = [
       'já to mám v popisu práce',
