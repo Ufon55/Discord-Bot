@@ -4,13 +4,12 @@ const { EmbedBuilder } = require('discord.js');
 const { joinVoiceChannel, createAudioPlayer, createAudioResource, AudioPlayerStatus } = require('@discordjs/voice');
 const play = require('play-dl');
 
-// Create client with necessary intents
 const client = new Client({
   intents: [
-    GatewayIntentBits.Guilds,          // For basic server info
-    GatewayIntentBits.GuildMessages,   // For reading messages
-    GatewayIntentBits.MessageContent,  // Needed if you want to read message text
-    GatewayIntentBits.GuildVoiceStates // Needed for joining voice channels
+    GatewayIntentBits.Guilds,          
+    GatewayIntentBits.GuildMessages,   
+    GatewayIntentBits.MessageContent,  
+    GatewayIntentBits.GuildVoiceStates 
   ]
 
   
@@ -25,7 +24,6 @@ const commands = [
   '!ptacek'
 ]
 
-// Triggered when bot is ready
 client.once('ready', () => {
   console.log(`✅Logged in as ${client.user.tag}✅`);
 });
